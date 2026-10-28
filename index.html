@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untuk Rere</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blush: #f6ddd2;
+    --peach: #f9e9df;
+    --paper: #fff8f3;
+    --ink: #5b3b40;
+    --rose: #c27a83;
+    --soft: #8d6b6f;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: radial-gradient(ellipse at 30% 20%, var(--peach) 0%, var(--blush) 100%);
+    color: var(--ink);
+    font-family: "Mali", "Segoe Print", "Comic Sans MS", "Trebuchet MS", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .letter {
+    width: 100%;
+    max-width: 460px;
+    background: var(--paper);
+    border-radius: 22px 22px 22px 6px;
+    padding: 40px 34px 34px;
+    box-shadow: 0 18px 40px -18px rgba(150, 90, 95, 0.35);
+    position: relative;
+  }
+  .letter::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 36px; bottom: 36px;
+    width: 3px;
+    border-radius: 3px;
+    background: linear-gradient(var(--rose), #e9b99a);
+    opacity: 0.55;
+  }
+  .to {
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--rose);
+    margin: 0 0 22px;
+  }
+  p {
+    margin: 0 0 22px;
+    font-size: 1.05rem;
+    line-height: 1.85;
+  }
+  .sign {
+    text-align: right;
+    margin: 30px 0 0;
+    color: var(--soft);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .sign strong { color: var(--rose); font-weight: 500; }
+
+  .line {
+    display: block;
+    opacity: 0;
+    animation: rise 0.9s ease forwards;
+    animation-delay: calc(var(--i) * 0.55s + 0.3s);
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .line { animation: none; opacity: 1; }
+  }
+  @media (max-width: 420px) {
+    .letter { padding: 32px 24px 28px; }
+    p { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+  <main class="letter">
+    <h1 class="to line" style="--i:0">To Rere</h1>
+
+    <p>
+      <span class="line" style="--i:1">Akhir-akhir ini kamu kayak jauh,</span>
+      <span class="line" style="--i:2">padahal kita masih di tempat yang sama.</span>
+      <span class="line" style="--i:3">Mungkin ada salahku yang aku ga sadar,</span>
+      <span class="line" style="--i:4">dan kamu diem aja nyimpen semuanya.</span>
+    </p>
+
+    <p>
+      <span class="line" style="--i:6">Bilang aja ya, ga apa-apa.</span>
+      <span class="line" style="--i:7">Aku lebih milih denger yang jujur</span>
+      <span class="line" style="--i:8">daripada nebak-nebak dalam sepi.</span>
+    </p>
+
+    <p>
+      <span class="line" style="--i:10">Aku masih di sini.</span>
+    </p>
+
+    <div class="sign line" style="--i:12">
+      Love, you<br>
+      From: <strong>Arsyl</strong>
+    </div>
+  </main>
+</body>
+</html>
